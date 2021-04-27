@@ -3,3 +3,6 @@ image:
 ports:
     - port: 5432
 
+tasks:
+  - command: "psql -c CREATE ROLE tech WITH LOGIN PASSWORD 'tech';"
+
