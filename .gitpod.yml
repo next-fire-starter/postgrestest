@@ -4,5 +4,3 @@ ports:
     - port: 5432
 tasks:
   - command: psql -c "CREATE DATABASE tech OWNER gitpod;"
-  - command: echo "Hello1"
-  - command: echo "Hello2"
