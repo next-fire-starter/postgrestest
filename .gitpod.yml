@@ -2,3 +2,6 @@ image:
   file: .gitpod.Dockerfile
 ports:
     - port: 5432
+tasks:
+  - command: "psql -c CREATE ROLE tech WITH LOGIN PASSWORD 'tech';"
+  - command: "psql -c CREATE DATABASE tech OWNER tech;"
