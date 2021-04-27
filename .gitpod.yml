@@ -1,4 +1,4 @@
-image: postgres:12.6
-
+image:
+  file: .gitpod.Dockerfile
 ports:
     - port: 5432
