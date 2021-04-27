@@ -1,8 +1,4 @@
-image:
-  file: .gitpod.Dockerfile
+image: postgres:12.6-alpine
+
 ports:
     - port: 5432
-
-tasks:
-  - command: "psql -c CREATE ROLE tech WITH LOGIN PASSWORD 'tech';"
-
