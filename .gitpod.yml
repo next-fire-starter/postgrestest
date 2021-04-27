@@ -4,4 +4,5 @@ ports:
     - port: 5432
 tasks:
   - command: psql -c "CREATE ROLE tech WITH LOGIN PASSWORD 'tech';"
-  - command: psql -c "CREATE DATABASE tech OWNER tech;"
+  - command: export PGPASSWORD='tech'
+  - command: psql -U "tech" -c "CREATE DATABASE tech OWNER tech;"
