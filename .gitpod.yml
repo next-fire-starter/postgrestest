@@ -4,4 +4,5 @@ ports:
     - port: 5432
 tasks:
   - init: psql -c "CREATE DATABASE tech OWNER gitpod;"
-    command: psql -U tech -c "CREATE SCHEMA AUTHORIZATION techsc;"
+    command: psql -c "CREATE SCHEMA AUTHORIZATION tech;"
+    command: psql -c "CREATE TABLE memo ( title VARCHAR(20) NOT NULL, note TEXT NOT NULL, PRIMARY KEY (title) ) WITHOUT OIDS;"
