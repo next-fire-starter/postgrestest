@@ -3,4 +3,4 @@ image:
 ports:
     - port: 5432
 tasks:
-  - command: psql -c "CREATE DATABASE tech OWNER gitpod;" && psql -d tech -c "CREATE SCHEMA AUTHORIZATION techsc;" && psql -d tech -c "CREATE TABLE techsc.memo ( title VARCHAR(20) NOT NULL, note TEXT NOT NULL, PRIMARY KEY (title) ) WITHOUT OIDS;"
+  - command: psql -c "CREATE DATABASE tech OWNER gitpod;" && psql -d tech -c "CREATE SCHEMA AUTHORIZATION tech;" && psql -d tech -c "CREATE TABLE tech.memo ( title VARCHAR(20) NOT NULL, note TEXT NOT NULL, PRIMARY KEY (title) ) WITHOUT OIDS;"
