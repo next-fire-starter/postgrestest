@@ -3,5 +3,5 @@ image:
 ports:
     - port: 5432
 tasks:
-  - command: psql -c "CREATE DATABASE tech OWNER gitpod;"
-  - command: psql -U tech -c "CREATE SCHEMA AUTHORIZATION techsc;"
+  - init: psql -c "CREATE DATABASE tech OWNER gitpod;"
+    command: psql -U tech -c "CREATE SCHEMA AUTHORIZATION techsc;"
