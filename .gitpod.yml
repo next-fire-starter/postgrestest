@@ -8,9 +8,9 @@ ports:
 # スキーマ techscを作成
 # テーブル作成用SQLファイルを読み込む
 tasks:
-  - command: psql -c "CREATE DATABASE techdb OWNER gitpod;"       
-          && psql -d techdb -c "CREATE SCHEMA techsc AUTHORIZATION gitpod;" 
-          && psql -d techdb -f ./DB/table.sql
+  - init: psql -c "CREATE DATABASE techdb OWNER gitpod;"       
+       && psql -d techdb -c "CREATE SCHEMA techsc AUTHORIZATION gitpod;" 
+       && psql -d techdb -f ./DB/table.sql
 
 # Postgresql extension
 vscode:
