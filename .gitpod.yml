@@ -1,5 +1,6 @@
 image:
   file: .gitpod.Dockerfile
+
 ports:
     - port: 5432
 
@@ -10,3 +11,8 @@ tasks:
   - command: psql -c "CREATE DATABASE techdb OWNER gitpod;"       
           && psql -d techdb -c "CREATE SCHEMA techsc AUTHORIZATION gitpod;" 
           && psql -d techdb -f ./DB/table.sql
+
+# Postgresql extension
+vscode:
+  extensions:
+    - ckolkman.vscode-postgres@1.1.17:804d27cd5e9ff60a8c46a387413e9cbf
