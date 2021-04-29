@@ -1,9 +1,6 @@
 image:
   file: .gitpod.Dockerfile
 
-ports:
-    - port: 5432
-
 # データベース techdbを作成
 # スキーマ techscを作成
 # テーブル作成用SQLファイルを読み込む
