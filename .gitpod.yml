@@ -9,7 +9,7 @@ tasks:
   - init: psql -c "CREATE DATABASE techdb OWNER gitpod;"       
        && psql -d techdb -c "CREATE SCHEMA techsc AUTHORIZATION gitpod;" 
        && psql -d techdb -f ./DB/table.sql
-       && psql -d tachdb -f ./DB/initdata.sql
+       && psql -d techdb -f ./DB/initdata.sql
 
 # Postgresql extension
 vscode:
