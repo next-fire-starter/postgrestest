@@ -1,13 +1,11 @@
 image:
   file: .gitpod.Dockerfile
 
-# データベース techdbを作成
-# スキーマ techscを作成
+# データベースとスキーマを作成するファイル database.sql を読み込む
 # テーブル作成用SQLファイル table.sql を読み込む
 # 初期データ initdata.sql を読み込む
 tasks:
-  - init: psql -c "CREATE DATABASE techdb OWNER gitpod;"       
-       && psql -d techdb -c "CREATE SCHEMA techsc AUTHORIZATION gitpod;" 
+  - init: psql -f ./DB/database.sql   
        && psql -d techdb -f ./DB/table.sql
        && psql -d techdb -f ./DB/initdata.sql
 
