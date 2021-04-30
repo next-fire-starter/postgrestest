@@ -11,7 +11,7 @@ CREATE TABLE IF NOT EXISTS techsc.memo (
 
 -- 従業員
 DROP TABLE IF EXISTS techsc.employee;
-CREATE TABLE IF NOT EXISTS employee (
+CREATE TABLE IF NOT EXISTS techsc.employee (
     id serial,
     name text NOT NULL unique,
     tel text,
