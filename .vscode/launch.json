@@ -10,5 +10,5 @@
             "name": "Launch Chrome against localhost",
             "program": "${workspaceFolder}/bin/www"
         }
-    ]
+    ] 
 }
