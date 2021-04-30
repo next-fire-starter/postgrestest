@@ -4,7 +4,7 @@ const dbConfig = require('../db/db-config');
 /**
  * employee テーブルの Entity モデル
  */
-const employee = dbConfig.define('techsc.employee', {
+const employee = dbConfig.define('employee', {
   id: {
     type: Sequelize.INTEGER,
     primaryKey: true,

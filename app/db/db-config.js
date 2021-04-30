@@ -15,7 +15,10 @@ const dbConfig = new Sequelize('techdb', 'gitpod', 'gitpod', {
     min: 0,
     acquire: 30000,
     idle: 10000
-  }
+  },
+  define: {
+    schema: "techsc"
+},
 });
 
 module.exports = dbConfig;
